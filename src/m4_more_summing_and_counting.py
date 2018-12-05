@@ -12,12 +12,12 @@ in its "in graphics" form:
    IN GRAPHICS:   x = x + pixels
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
-         Aaron Wilkin, their colleagues, and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Aaron Wilkin, their colleagues, and Kaitlin Weik.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import math
 import builtins  # Never necessary, but here for pedagogical reasons
-
+import rosegraphics as rg
 
 # -----------------------------------------------------------------------------
 # Students: As you work each of these problems, ask yourself:
@@ -90,7 +90,7 @@ def run_test_sum_from():
     print('       actual (from my code):  ', answer_from_my_code)
 
 # -----------------------------------------------------------------------------
-# TODO: 2.
+# DONE: 2.
 #   When you have READ the above  run_test_sum_from  function,
 #   asking questions as needed, and you feel that you (mostly, at least)
 #   understand it, and you feel that you understand from the example:
@@ -113,6 +113,12 @@ def sum_from(m, n):
     Example:
         sum_from(6, 9) returns 6 + 7 + 8 + 9, that is, 30.
     """
+
+    total = 0
+    for k in range(n+1-m):
+        total = k*n
+    return total
+
     # -------------------------------------------------------------------------
     # TODO: 3. Implement and test this function.
     #          Tests have been written for you (above).
@@ -180,6 +186,10 @@ def factorial(n):
     #   use an explicit    for ... in range(...):     statement.
     # -------------------------------------------------------------------------
 
+    total = 0
+    for k in range(n):
+        total = k*n
+    return total
 
 def run_test_count_cosines_from():
     """ Tests the   count_cosines_from   function. """
