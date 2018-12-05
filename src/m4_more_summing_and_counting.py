@@ -188,7 +188,7 @@ def factorial(n):
 
     total = 0
     for k in range(n):
-        total = k*n
+        total = n*(n-k)
     return total
 
 def run_test_count_cosines_from():
